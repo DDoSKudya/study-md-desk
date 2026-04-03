@@ -1,5 +1,4 @@
 PyQt6>=6.4
 PyQt6-WebEngine>=6.4
-PyQt6-QtWebChannel>=6.4
 markdown>=3.4
 pygments>=2.14
