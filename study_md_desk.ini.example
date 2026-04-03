@@ -1,0 +1,18 @@
+[app]
+rootdir = /absolute/path/to/study_md_desk
+apptitle = Study MD Desk
+appsubtitle = Comfortable reading and learning from Markdown materials
+theme = white
+chatoptions = https://chat.qwen.ai/;https://www.perplexity.ai/;https://chat.deepseek.com/
+chaturl = https://chat.qwen.ai/
+sandboxoptions = https://www.programiz.com/python-programming/online-compiler/;https://www.programiz.com/sql/online-compiler/
+sandboxurl = https://www.programiz.com/python-programming/online-compiler/
+ttsengine = piper
+ttsvoice = ru
+ttsrate = 175
+pipervoicename = ru_RU-ruslan-medium
+# pipermodelpath = tts_models/ru_RU-ruslan-medium/model.onnx
+# piperconfigpath = tts_models/ru_RU-ruslan-medium/model.onnx.json
+translateoptions = https://translate.yandex.ru/;https://translate.google.com
+translateurl = https://translate.yandex.ru/
+explainpromptkey = explain_en

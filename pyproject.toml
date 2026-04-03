@@ -1,0 +1,35 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "W"]
+extend-select = ["S310"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --cov=viewer_app --cov=study_md_desk --cov-report=term-missing"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+branch = false
+source = ["viewer_app", "study_md_desk.py"]
+omit = [
+    "*/viewer_app/desktop/*",
+    "*/tests/*",
+    # Large text/Markdown engines: exercised via md_to_html / TtsTextPipeline and manual QA; full line coverage is disproportionate effort vs. HTTP/runtime layers.
+    "*/viewer_app/core/markdown_core.py",
+    "*/viewer_app/core/tts_text.py",
+]
+
+[tool.coverage.report]
+fail_under = 90
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "\\.\\.\\.",
+]
